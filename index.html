@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Initiation HTML/CSS</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Initiation HTML /  CSS</h1>
+					
+					<p>
+						<small>Created by <a href="#">Thamer Belfkih</a></small>
+					</p>
+				</section>
+
+				<section>
+					
+					<section>
+					   <img width="90%" height="90%" src="what-is-html.jpg" alt="Down arrow">
+				    </section>
+				    <section>
+					    <p>HyperText Mark-Up Language</p>
+				    </section>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+				
+				       <img width="95%" height="95%" data-src="html1.png" alt="Down arrow">
+				</section>
+
+				<section>
+				     <section>
+				        <img width="95%" height="95%" data-src="css.png" alt="Down arrow"> 	
+				     </section>
+					
+					<section>
+					    <p> Cascading Style Sheets</p>
+				    </section>
+					
+				</section>
+
+				<section>
+					<img width="95%" height="95%" data-src="cssrslt.png" alt="Down arrow">
+				</section>
+
+				<section>
+					<img width="800px" height="700px;" data-src="htmlsanscss.png" alt="Down arrow" style="margin-top: -50px;"> 
+				</section>
+				<section>
+					<img width="90%" height="90%" data-src="areyourady.png" alt="Down arrow"> 
+				</section>
+
+				<section>
+					<h1>création du projet</h1> 
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## DOCtype
+
+						le seule type de document à utiliser.
+
+						```
+						<!doctype html>
+						```
+					</script>
+				</section>
+
+				<section>
+				 <section data-markdown>
+				 	<h4>Structure technique </h4> 
+					<p>Le HTML a une structure arborescente qui commence par <html> 
+                         <script type="text/template">
+						<h1>Structure technique </h1> 
+					<p>Le HTML a une structure arborescente qui commence par</p>
+
+						```
+                           <html> 
+						```
+					</script>
+					</section>
+					<section>
+						<p>Elle est composée de 2 grandes parties  :</p> <br>
+						<img width="90%" height="90%" data-src="contenu.png" alt="Down arrow">
+					</section>
+					
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						## titre et description
+
+						les informations complémentaires (meta).<br>invisible pour l utilisateur.<br> sont destinées aux moteurs de recherche.
+
+						```
+						<title>Titre de la page </title>
+						<<meta name="description" content="description de la page ">
+
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Icône
+
+						le titre de la page s affiche également dans l onglet du navigateur avec une icône (favion)  .
+
+						```
+						<<link rel="icon" href="favion.png">
+
+						```
+					</script>
+				</section>
+              <section>
+              	  <section data-markdown>
+					<script type="text/template">
+						## Feuilles de styles CSS
+
+						Pour inclure une feuille de styles (stylesheet) :
+
+						```
+						<link rel="stylesheet" href="style.css">
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Mauvaises pratiques :  						
+
+						```
+						<style> p{color:red;}</style>
+						<p style="color:red;"></p>
+						```
+					</script>
+				</section>
+              </section>
+
+              <section>
+	              <section id="fragments">
+	              	  <h4>Contenu HTML & sémantique</h4>
+				      <p class="fragment">titres et paragraphes</p>
+				      <p class="fragment">h1 à h6 :  titres et sous titres ( Headings) </p>	
+				       <p class="fragment">p:  contenu classique ( Paragraph) </p>
+				       <p class="fragment">br:  revenir à la ligne (break) dans une paragraphe </p>		
+	              </section>
+	              <section id="fragments">
+				      <p>listes et menus</p>
+				      <p class="fragment">ul : liste à puces ( unordered list) </p>	
+				      <p class="fragment">ol : liste numérotée (ordered list) </p>	
+				      <p class="fragment">li : élément dans une liste (list item) </p>
+	              </section>
+		              <section data-markdown id="fragments">
+							<script type="text/template">
+								  		##Example : 				
+
+								```
+								<ul>
+									<li>R1</li>
+									<li>R2
+									   <ul>
+									   	<li>R2.1</li>
+									   	<li>R2.2</li>
+									   	<li>R2.3</li>
+									   </ul>
+									</li>
+									<li>R3</li>
+								</ul>
+
+								```
+							</script>
+					</section>
+			      	
+			  </section>
+	              </section>
+
+              <section>
+                 <section id="fragments">
+                 	<h3>Contenus multimédia et interactif </h3>
+                 </section>
+                 <section id="fragments">
+                 	<h4>Liens hypertextes :il existe plusieurs types  de liens </h4>
+                 	  <p class="fragment">lien vers une autre page de site <pre class="fragment"><code class="hljs">&lt;a href="page.html"&gt;</code></pre> </p>	
+
+				      <p class="fragment">lien vers un site externe (nouvel onglet) : <pre class="fragment"><code class="hljs">&lt;a href="http://example.com/" target="_blank"&gt;</code></pre> </p>	
+				      <p class="fragment">lien vers un fichier <pre class="fragment"><code class="hljs">&lt;a href="fichier.pdf"&gt;</code></pre> </p>
+                 </section>
+                 <section id="fragments">
+                 	<h4>Images</h4>
+                 	<p class="fragment">Image se place ainsi : <pre class="fragment"><code class="hljs">&lt;img src="image.png" width="50" height="100" alt="img not visible" title="hover"&gt;</code></pre> </p>
+                 	<p class="fragment">On indique :  <br>
+                         <ul class="fragment">
+                         	<li class="fragment">la source (src)</li>
+                         	<li class="fragment">les dimentions en pixels</li>
+                         	<li class="fragment">alt : text alternatif (accessibilité)</li>
+                         	<li class="fragment">title : text au survol</li>
+                         </ul>
+                 	 </p>
+
+                 </section>
+              	
+              </section>
+              <section>
+	              <section>
+	              	  <h3>Div</h3>
+	                <p>signifiant division du document</p>
+	                <p><pre ><code class="hljs">&lt;div&gt;</code></pre> </p>
+	              </section>
+	              <section>
+	              	<img width="90%" height="90%" data-src="div.gif" alt="Down arrow">
+	              </section>              	
+              </section>
+              <section>
+	              	<img width="90%" height="600px" data-src="itstimeforcss.png" alt="Down arrow">
+	           </section> 
+	           <section>
+		            <section>
+		            	<h3>Selecteurs CSS</h3>
+		            </section>
+	              	<section>
+	              		<h3>identifiants & classes</h3>
+	              		<p>Toute balise HTML peut  : </p>
+	              		 <ul class="fragment">
+                         	<li class="fragment">id : avoir un idantifiant unique</li>
+                         	<li class="fragment">class : appartenir à un ou plusieurs groupes</li>
+                         </ul>
+                         <pre class="fragment"><code class="hljs">&lt;div id="header" class="main"&gt;</code></pre>
+	              	</section>
+	              	<section>
+	              		<p>Sélecteurs principaux </p>
+	              		 <ul class="fragment">
+                         	<li class="fragment"> p </li>
+                         	<li class="fragment">#idname</li>
+                         	<li class="fragment">.classname</li>
+                         </ul>
+	              	</section>
+	              	<section>
+	              		<p>Pseudo-classes </p>
+	              		 <ul class="fragment">
+                         	<li class="fragment"> a:hover </li>
+                         	<li class="fragment">ul>li:first-child</li>
+                         </ul>
+	              	</section>
+	           </section> 
+	           <section>
+	              		<section>
+	              			<h3>Le graphisme en css</h3>
+	              		</section>
+	              		<section>
+	              			<h3>texte & polices</h3>
+	              			<p>Polices</p>
+	              			<ul class="fragment">
+	                         	<li class="fragment"> font-style : normal | italic ; </li>
+	                         	<li class="fragment">font-weight : normal | bold</li>
+	                         	<li class="fragment">font-size :12px; </li>
+	                         	<li class="fragment">font-family :'Tahoma' , 'Arial' , 'sans-serif'; </li>
+	                         </ul>
+	              		</section>
+	              		<section>
+	              			<p>texte</p>
+	              			<ul class="fragment">
+	                         	<li class="fragment"> text-align : left | center | right; </li>
+	                         	<li class="fragment">text-decoration :  none | underline| line-through</li>
+	                         	<li class="fragment">text-transform : none | capitalize |uppercase |lowercase </li>
+	                         	<li class="fragment">font-family :'Tahoma' , 'Arial' , 'sans-serif'; </li>
+	                         </ul>
+	              		</section>
+	              		<section>
+	              			<p>Listes</p>
+	              			<ul class="fragment">
+	                         	<li class="fragment"> list-style-type : disc | circle | square |none; </li>
+	                         	<li class="fragment">list-style-image :  none | url(img.jpg)</li>
+	                         	<li class="fragment">list-style-position : outside | inside </li>
+	                         </ul>
+	              		</section>
+	              		<section>
+	              			<p>Couleurs & unités</p>
+	              			<p>color : red;</p>
+	              			<ul class="fragment">
+	                         	<li class="fragment"> rgb(0,255,0) :red,green,blue </li>
+	                         	<li class="fragment">red :simple coleur</li>
+	                         	<li class="fragment">#00FF00 : hexadécimal </li>
+	                         </ul>
+	              		</section>
+	              		<section>
+	              			<p>Fonds</p>
+	              			<ul class="fragment">
+	                         	<li class="fragment"> background-image: url(img.png);</li>
+	                         	<li class="fragment">background-repeat : repeat |repeat-x|repeat-y|no-repeat</li>
+	                         	<li class="fragment">background-color:rgb(0,255,0);</li>
+	                         </ul>
+	              		</section>
+	              		<section>
+	              			<p>Bordures et arrondis</p>
+	              			<ul class="fragment">
+	                         	<li class="fragment"> border-width:1px;</li>
+	                         	<li class="fragment">border-style: none |solid |dotted |dashed |double</li>
+	                         	<li class="fragment">border-color :#FFFFFF;</li>
+	                         	<li class="fragment">border :1px solid red ;</li>
+	                         	<li class="fragment">border-radius :5px ;</li>
+	                         </ul>
+	              		</section>
+	              	</section>
+	              	<section>
+	              	   <h3>Positionnement</h3>
+	              	    <section>
+	              			<p>position</p>
+	              			<ul class="fragment">
+	                         	<li class="fragment">position:static |relative |fixed |absolute;</li>
+	                         </ul>
+	              		</section>
+	              		<section>
+	              			<p>margin</p>
+	              			<ul class="fragment">
+	                         	<li class="fragment">margin:10px 10px 10px 10px;</li>
+	                         	<li class="fragment">margin-left:10px;</li>
+	                         	<li class="fragment">margin-top:10px;</li>
+	                         </ul>
+	              		</section>
+	              		<section>
+	              			<p>padding</p>
+	              			<ul class="fragment">
+	                         	<li class="fragment">padding:10px 10px 10px 10px;</li>
+	                         	<li class="fragment">padding-left:10px;</li>
+	                         	<li class="fragment">padding-top:10px;</li>
+	                         </ul>
+	              		</section>
+	              	</section>
+	              	<section>
+	              	   <section>
+		              	   	<h3>Tableau</h3>
+		              		<p>thead : tableau header</p>
+		              		<p>tbody : tableau body</p>
+		              		<p>tr : indique le début et la fin d'une ligne du tableau</p>
+		              		<p>td : indique le début et la fin du contenu d'une cellule</p>
+	              	   </section>
+	              	   <section data-markdown>
+							<script type="text/template">
+								  		##Example : 				
+
+								```
+								<table>
+									<thead>
+										<tr>
+											<th>Item</th>
+											<th>Value</th>
+											<th>Quantity</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Apples</td>
+											<td>$1</td>
+											<td>7</td>
+										</tr>
+										<tr>
+											<td>Lemonade</td>
+											<td>$2</td>
+											<td>18</td>
+										</tr>
+										<tr>
+											<td>Bread</td>
+											<td>$3</td>
+											<td>2</td>
+										</tr>
+									</tbody>
+					            </table>
+
+								```
+							</script>
+					</section>
+	              	</section>
+	              	<section>
+	              	    <section>
+	              	       <h3>Formulaires</h3> 	
+	              	    </section>
+	              	    <section>
+	              	    	       <p>Input</p>
+	              	    	       <p class="fragment"> <pre class="fragment"><code class="hljs">&lt;input type="" name="" placeholder="" value=""/&gt;</code></pre> </p>       			
+	              	    </section>
+	              	    <section>
+	              	    	       <p>Type input</p>
+	              	    	       <p class="fragment"> text</p> 
+	              	    	       <p class="fragment"> checkbox</p>
+	              	    	       <p class="fragment"> radio</p> 
+	              	    	       <p class="fragment"> number</p>
+	              	    	       <p class="fragment"> date</p> 
+	              	    	       <p class="fragment"> email</p>
+	              	    	       <p class="fragment"> file</p>     
+	              	    	       <p class="fragment"> submit</p>
+	              	    	       <p class="fragment"> ...</p>          			
+	              	    </section>	
+	              	     <section data-markdown>
+							<script type="text/template">
+								  		##Select box : 				
+
+								```
+								<select name="" multiple>
+				              		<option value="val1">option1</option>
+				              		<option value="val2">option2</option>
+				              	</select>
+
+								```
+							</script>
+					</section>
+					  <section data-markdown>
+							<script type="text/template">
+								  		##textarea  : 				
+
+								```
+								<textarea name="" row="" cols="">
+	              		
+	              		
+	                        	</textarea>
+
+								```
+							</script>
+					</section>	              		
+	              	</section> 
+	              	<section>
+	              	 	<h3>liens utiles</h3>
+	              	 	<p>https://developer.mozilla.org/fr/docs/Web/HTML</p>
+	              	 	<p>https://developer.mozilla.org/fr/docs/Web/CSS</p>
+	              	 	<p>w3schools.com</p>
+	              	 </section> 
+	              	 <section>
+	              	 	<h3>Contact</h3>
+	              	 	<p>Thamer.belfkih@hotmail.com</p>
+	              	 </section> 
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
